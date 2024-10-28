@@ -26,7 +26,7 @@ namespace kevinchicaiza_Examen1P.Models
         public string KCColor { get; set; }
 
         public string KCGenero { get; set; }  // Género (masculino, femenino, unisex)
-        public string  KcTipoderopa { get; set; }  // Tipo de prenda (camiseta, pantalón, etc.)
+        public string  KcTipodegenero { get; set; }  // Tipo de prenda (camiseta, pantalón, etc.)
         public string? KCDescripcion { get; set; }
 
     }
