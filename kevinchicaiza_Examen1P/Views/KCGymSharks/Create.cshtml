@@ -1,0 +1,78 @@
+﻿@model kevinchicaiza_Examen1P.Models.KcGymshark
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>KcGymshark</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="KCName" class="control-label"></label>
+                <input asp-for="KCName" class="form-control" />
+                <span asp-validation-for="KCName" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="KCtallas" /> @Html.DisplayNameFor(model => model.KCtallas)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="KCPrecio" class="control-label"></label>
+                <input asp-for="KCPrecio" class="form-control" />
+                <span asp-validation-for="KCPrecio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Emaildelusuario" class="control-label"></label>
+                <input asp-for="Emaildelusuario" class="form-control" />
+                <span asp-validation-for="Emaildelusuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KCFechadeEntrada" class="control-label"></label>
+                <input asp-for="KCFechadeEntrada" class="form-control" />
+                <span asp-validation-for="KCFechadeEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KCFechadeSalida" class="control-label"></label>
+                <input asp-for="KCFechadeSalida" class="form-control" />
+                <span asp-validation-for="KCFechadeSalida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KCColor" class="control-label"></label>
+                <input asp-for="KCColor" class="form-control" />
+                <span asp-validation-for="KCColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KCGenero" class="control-label"></label>
+                <input asp-for="KCGenero" class="form-control" />
+                <span asp-validation-for="KCGenero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KcTipodegenero" class="control-label"></label>
+                <input asp-for="KcTipodegenero" class="form-control" />
+                <span asp-validation-for="KcTipodegenero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KCDescripcion" class="control-label"></label>
+                <input asp-for="KCDescripcion" class="form-control" />
+                <span asp-validation-for="KCDescripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

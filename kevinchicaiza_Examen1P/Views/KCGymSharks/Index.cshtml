@@ -1,0 +1,89 @@
+﻿@model IEnumerable<kevinchicaiza_Examen1P.Models.KcGymshark>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KCName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KCtallas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KCPrecio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emaildelusuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KCFechadeEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KCFechadeSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KCColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KCGenero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KcTipodegenero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KCDescripcion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KCName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KCtallas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KCPrecio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emaildelusuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KCFechadeEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KCFechadeSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KCColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KCGenero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KcTipodegenero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KCDescripcion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.KCRopaid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KCRopaid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.KCRopaid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
